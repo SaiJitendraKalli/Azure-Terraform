@@ -2,7 +2,7 @@ name: 'Terraform'
 
 on:
   push:
-    branches: [ "terraform-actions" ]
+    branches: [ "dev" ]
   pull_request_review:
     types: [ closed ]
 
