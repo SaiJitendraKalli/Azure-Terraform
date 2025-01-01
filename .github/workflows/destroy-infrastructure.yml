@@ -1,12 +1,6 @@
 name: 'Destroy Infrastructure with Terraform'
 
 on:
-  push:
-    branches-ignore:
-      - main
-  pull_request:
-    types: [ closed ]
-    branches: [ main ]
   workflow_dispatch:
 
 permissions:
