@@ -1,11 +1,13 @@
-name: 'Terraform'
+name: 'Destroy Infrastructure with Terraform'
 
 on:
   push:
-    branches: [ "dev" ]
-  pull_request_review:
+    branches-ignore:
+      - main
+  pull_request:
     types: [ closed ]
-
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -38,5 +40,5 @@ jobs:
 
         # On push to "main", build or change infrastructure according to Terraform configuration files
         # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
-      - name: Terraform Apply
-        run: terraform apply -auto-approve -input=false
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve -input=false
