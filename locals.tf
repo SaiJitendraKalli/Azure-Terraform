@@ -4,5 +4,6 @@ locals {
   tags  ={
     "Owner" = "Sai Jitendra Kalli"
     "Deployment" = "Terraform"
+    "env"="dev"
   }
 }
