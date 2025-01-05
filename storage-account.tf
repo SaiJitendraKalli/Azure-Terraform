@@ -1,7 +1,7 @@
 
 resource "azurerm_storage_account" "StorageAccount" {
 
-  name                     = "terraformazurejitendra"
+  name                     = "jitendraazurestorage"
   location                 = local.location
   resource_group_name      = azurerm_resource_group.ResourceGroup.name
   account_tier             = "Standard"
