@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "ResourceGroup" {
-  name     = "TerraformResourceGroup"
+  name     = "AppRG"
   location = local.location
   tags = local.tags
 }
